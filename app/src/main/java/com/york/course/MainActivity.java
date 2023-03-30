@@ -1,5 +1,6 @@
 package com.york.course;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -34,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("App", "Button clicked!!!");
 
                 Snackbar.make(v, "Button clicked!!!", 5000).show();
-                Toast.makeText(MainActivity.this, "Button from Toast!!!",  Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Button from Toast!!!", Toast.LENGTH_LONG).show();
+
+                startActivity(new Intent(MainActivity.this, MainActivity2.class));
             }
         });
     }
